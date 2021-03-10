@@ -11,7 +11,7 @@
       <h1 class="title">nuxt-demo</h1>
 
       <h4>{{ userInfo.desc || userInfo }}</h4>
-      {{ tesmsg || "xxx" }}
+      {{ "xxx" }}
       <div class="links">
         <el-button type="primary" @click="handleGetInfo">request</el-button>
         <nuxt-link to="/temp">go Temp</nuxt-link>
@@ -69,11 +69,11 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
   text-align: center;
 
   .avatar {
@@ -84,6 +84,7 @@ export default {
 }
 
 .title {
+  display: block;
   font-family:
     "Quicksand",
     "Source Sans Pro",
@@ -94,18 +95,17 @@ export default {
     "Helvetica Neue",
     Arial,
     sans-serif;
-  display: block;
-  font-weight: 300;
   font-size: 100px;
-  letter-spacing: 1px;
+  font-weight: 300;
   color: #35495e;
+  letter-spacing: 1px;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  word-spacing: 5px;
   padding-bottom: 15px;
+  font-size: 42px;
+  font-weight: 300;
+  word-spacing: 5px;
 }
 
 .button--green {
